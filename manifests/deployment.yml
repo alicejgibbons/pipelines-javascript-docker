@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: alicejgibbonspipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: alicejgibbonspipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: alicejgibbonspipelinesjavascriptdocker 
+          image: vigilantesacr.azurecr.io/alicejgibbonspipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
